@@ -21,3 +21,20 @@ All test files are inside the `cypress/e2e/` folder:
 Credentials Used
 
 All tests log in with the username `standard_user` and the password `secret_sauce`, which are the publicly provided demo credentials for saucedemo.com.
+
+Task 2 — Assertions, Aliases and Custom Commands
+
+This task goes deeper into Cypress by practising different assertion
+types, using aliases to reference elements, and writing a reusable
+custom login command.
+
+The custom command cy.login() is defined in cypress/support/commands.js
+and is used across tests instead of repeating the login steps manually.
+
+To run only the Task 2 tests:
+
+npx cypress run --spec "cypress/e2e/task2.cy.js"
+
+To run all tests:
+
+npx cypress run
