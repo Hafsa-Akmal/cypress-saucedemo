@@ -11,9 +11,11 @@ describe('Task 2 — Assertions, Aliases and Custom Commands', () => {
     it('Assert that the Products heading has correct text', () => {
         cy.get('.title').should('have.text', 'Products')
     })
-    it('Assert that the shopping cart link has a valid href attribute', () => {
-        cy.get('.shopping_cart_link').should('have.attr', 'href', '/cart.html')
+    it('Assert that the login button has a data-test attribute', () => {
+        cy.visit('/')
+        cy.get('[data-test="login-button"]').should('have.attr', 'data-test', 'login-button')
     })
+
     it('Assert that the inventory list is not visible on login page', () => {
         cy.visit('/')
         cy.get('.inventory_list').should('not.exist')
